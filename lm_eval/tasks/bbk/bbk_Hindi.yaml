@@ -1,0 +1,5 @@
+dataset_name: Hindi
+include: _default_template_yaml
+tag: bbk-core
+task: bbk_Hindi
+task_alias: bbk_Hindi
