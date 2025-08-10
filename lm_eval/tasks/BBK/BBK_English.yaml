@@ -1,5 +1,5 @@
 dataset_name: English
 include: _default_template_yaml
-tag: BBK-core
-task: BBK_English
-task_alias: BBK_English
+tag: bbk-core
+task: bbk_English
+task_alias: bbk_English

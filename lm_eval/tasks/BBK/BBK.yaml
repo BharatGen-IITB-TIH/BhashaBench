@@ -1,7 +1,7 @@
-group: BBK
+group: bbk
 task:
-- BBK_English
-- BBK_Hindi
+- bbk_English
+- bbk_Hindi
 aggregate_metric_list:
 - metric: acc
   weight_by_size: true
