@@ -1,0 +1,9 @@
+group: BBK
+task:
+- BBK_English
+- BBK_Hindi
+aggregate_metric_list:
+- metric: acc
+  weight_by_size: true
+metadata:
+  version: '0.0'
