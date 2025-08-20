@@ -10,7 +10,7 @@ This repository contains code for evaluating language models on the BBK benchmar
 
 ## Domain Specific Benchmark
 
-1) **BhashaBench-Krishi (BBK)**: It is the first large-scale, authentic benchmark designed to rigorously evaluate AI models on Indian agricultural knowledge. Tailored for India’s diverse agro-ecological zones, crops, languages, and farming practices, BBK draws from 55+ official government agricultural exams to assess models' ability to provide precise, region-aware, policy-relevant, and actionable agricultural advice. [![Hugging Face](https://img.shields.io/badge/🤗%20Hugging%20Face-Datasets-yellow)](https://huggingface.co/datasets/bharatgenai/BhashaBench-Krishi) 
+1) **BhashaBench-Krishi (BBK)**: It is the first large-scale, authentic benchmark designed to rigorously evaluate AI models on Indian agricultural knowledge. Tailored for India’s diverse agro-ecological zones, crops, languages, and farming practices, BBK draws from 55+ official government agricultural exams to assess models' ability to provide precise, region-aware, policy-relevant, and actionable agricultural advice. [![Hugging Face](https://img.shields.io/badge/🤗%20Hugging%20Face-Datasets-yellow)](https://huggingface.co/datasets/bharatgenai/BhashaBench) 
 
 
 
