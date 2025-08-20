@@ -69,63 +69,66 @@ This repository contains code for evaluating language models on the BBK benchmar
     | Soil Science                   | 1357  |
     | Veterinary Sciences           | 48    |
 
+
 2) **BhashaBench-Finance (BBF)**: It is the first comprehensive benchmark designed to evaluate AI models on Indian financial knowledge and practices. Tailored for India's diverse financial ecosystem, regulatory framework, and economic landscape, BBF draws from 25+ official government and institutional financial exams to assess models' ability to provide accurate, policy-compliant, and contextually relevant financial advice and analysis. [![Hugging Face](https://img.shields.io/badge/🤗%20Hugging%20Face-Datasets-yellow)](https://huggingface.co/datasets/bharatgenai/BhashaBench-Finance) 
 
-### Key Features
-- **Languages**: English and Hindi (with plans for more Indic languages)
-- **Exams**: 25+ unique financial government and institutional exams across India
-- **Domains**: 30+ financial and allied domains, spanning comprehensive financial knowledge
-- **Questions**: 19,433 rigorously validated, exam-based questions
-- **Difficulty Levels**: Easy (7,111), Medium (9,348), Hard (2,974)
-- **Question Types**: Multiple Choice, Assertion-Reasoning, Match the Column, Rearrange the Sequence, Fill in the Blanks, Reading Comprehension, Essay
-- **Focus**: Practical, regulation-aware, India-specific financial knowledge essential for financial professionals and consumers
+    ### Key Features
+    - **Languages**: English and Hindi (with plans for more Indic languages)
+    - **Exams**: 25+ unique financial government and institutional exams across India
+    - **Domains**: 30+ financial and allied domains, spanning comprehensive financial knowledge
+    - **Questions**: 19,433 rigorously validated, exam-based questions
+    - **Difficulty Levels**: Easy (7,111), Medium (9,348), Hard (2,974)
+    - **Question Types**: Multiple Choice, Assertion-Reasoning, Match the Column, Rearrange the Sequence, Fill in the Blanks, Reading Comprehension, Essay
+    - **Focus**: Practical, regulation-aware, India-specific financial knowledge essential for financial professionals and consumers
 
-### Dataset Structure
-### Test Set
-The test set consists of the BBF benchmark, which contains approximately 19,000 questions across 2 Indic languages.
+    ### Dataset Structure
+    ### Test Set
+    The test set consists of the BBF benchmark, which contains approximately 19,000 questions across 2 Indic languages.
 
-### Dataset Statistics
-| Metric                   | Count                     |
-| ------------------------ | ------------------------- |
-| Total Questions          | 19,433                    |
-| English Questions        | 13,451                    |
-| Hindi Questions          | 5,982                     |
-| Subject Domains          | 30+                       |
-| Government Exams Covered | 25+                       |
+    ### Dataset Statistics
+    | Metric                   | Count                     |
+    | ------------------------ | ------------------------- |
+    | Total Questions          | 19,433                    |
+    | English Questions        | 13,451                    |
+    | Hindi Questions          | 5,982                     |
+    | Subject Domains          | 30+                       |
+    | Government Exams Covered | 25+                       |
 
-### Subjects spanning BBF
-| Subject Domain                                | Count |
-|---------------------------------------------|-------|
-| Problem Solving                             | 5,686 |
-| Mathematics for Finance                     | 4,845 |
-| Banking Services                           | 1,171 |
-| Governance & Policy                        | 1,064 |
-| Language & Communication                   | 946   |
-| Corporate Finance & Investment             | 910   |
-| Commerce                                   | 863   |
-| Accounting                                 | 773   |
-| General Knowledge                          | 539   |
-| Information Technology Finance             | 490   |
-| Economics & Development Studies            | 274   |
-| Rural Economics                            | 261   |
-| Environmental Finance                      | 168   |
-| Taxation & Regulatory Compliance           | 155   |
-| Interdisciplinary Finance                  | 153   |
-| Data & Analytics in Finance                | 127   |
-| History, Sociology & Cultural Studies of Finance | 127 |
-| Finance Education                          | 118   |
-| Healthcare Economics                       | 114   |
-| Science and Technology in Finance          | 101   |
-| International Finance & Trade              | 83    |
-| Business Management                        | 83    |
-| Energy, Infrastructure & Finance           | 82    |
-| Behavioral Finance                         | 67    |
-| Financial Markets                          | 47    |
-| Sports, Media & Finance Linkages           | 45    |
-| Marketing Finance                          | 42    |
-| Insurance & Risk Management                | 42    |
-| Legal Finance                              | 34    |
-| Financial Technology                       | 23    |
+    ### Subjects spanning BBF
+    | Subject Domain                                | Count |
+    |---------------------------------------------|-------|
+    | Problem Solving                             | 5,686 |
+    | Mathematics for Finance                     | 4,845 |
+    | Banking Services                           | 1,171 |
+    | Governance & Policy                        | 1,064 |
+    | Language & Communication                   | 946   |
+    | Corporate Finance & Investment             | 910   |
+    | Commerce                                   | 863   |
+    | Accounting                                 | 773   |
+    | General Knowledge                          | 539   |
+    | Information Technology Finance             | 490   |
+    | Economics & Development Studies            | 274   |
+    | Rural Economics                            | 261   |
+    | Environmental Finance                      | 168   |
+    | Taxation & Regulatory Compliance           | 155   |
+    | Interdisciplinary Finance                  | 153   |
+    | Data & Analytics in Finance                | 127   |
+    | History, Sociology & Cultural Studies of Finance | 127 |
+    | Finance Education                          | 118   |
+    | Healthcare Economics                       | 114   |
+    | Science and Technology in Finance          | 101   |
+    | International Finance & Trade              | 83    |
+    | Business Management                        | 83    |
+    | Energy, Infrastructure & Finance           | 82    |
+    | Behavioral Finance                         | 67    |
+    | Financial Markets                          | 47    |
+    | Sports, Media & Finance Linkages           | 45    |
+    | Marketing Finance                          | 42    |
+    | Insurance & Risk Management                | 42    |
+    | Legal Finance                              | 34    |
+    | Financial Technology                       | 23    |
+
+   
 ## Usage
 
 ##### Prerequisites
@@ -143,7 +146,7 @@ cd BhashaBench
 pip install -e .
 ```
 
-2. Request access to the HuggingFace 🤗 dataset [here](https://huggingface.co/datasets/bharatgenai/BhashaBench-Krishi).
+2. Request access to the HuggingFace 🤗 dataset [here](https://huggingface.co/datasets/bharatgenai/BhashaBench).
 
 3. Set up your environment variables:
 
