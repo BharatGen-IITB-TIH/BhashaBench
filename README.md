@@ -141,7 +141,7 @@ This repository contains code for evaluating language models on the BBK benchmar
 1. Clone this repository:
 
 ```bash
-git clone --depth 1 https://github.com/BharatGen-IITB-TIH/BhashaBench-Krishi.git
+git clone --depth 1 https://github.com/BharatGen-IITB-TIH/BhashaBench.git
 cd BhashaBench
 pip install -e .
 ```
