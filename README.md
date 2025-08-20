@@ -69,6 +69,63 @@ This repository contains code for evaluating language models on the BBK benchmar
     | Soil Science                   | 1357  |
     | Veterinary Sciences           | 48    |
 
+2) **BhashaBench-Finance (BBF)**: It is the first comprehensive benchmark designed to evaluate AI models on Indian financial knowledge and practices. Tailored for India's diverse financial ecosystem, regulatory framework, and economic landscape, BBF draws from 25+ official government and institutional financial exams to assess models' ability to provide accurate, policy-compliant, and contextually relevant financial advice and analysis. [![Hugging Face](https://img.shields.io/badge/🤗%20Hugging%20Face-Datasets-yellow)](https://huggingface.co/datasets/bharatgenai/BhashaBench-Finance) 
+
+### Key Features
+- **Languages**: English and Hindi (with plans for more Indic languages)
+- **Exams**: 25+ unique financial government and institutional exams across India
+- **Domains**: 30+ financial and allied domains, spanning comprehensive financial knowledge
+- **Questions**: 19,433 rigorously validated, exam-based questions
+- **Difficulty Levels**: Easy (7,111), Medium (9,348), Hard (2,974)
+- **Question Types**: Multiple Choice, Assertion-Reasoning, Match the Column, Rearrange the Sequence, Fill in the Blanks, Reading Comprehension, Essay
+- **Focus**: Practical, regulation-aware, India-specific financial knowledge essential for financial professionals and consumers
+
+### Dataset Structure
+### Test Set
+The test set consists of the BBF benchmark, which contains approximately 19,000 questions across 2 Indic languages.
+
+### Dataset Statistics
+| Metric                   | Count                     |
+| ------------------------ | ------------------------- |
+| Total Questions          | 19,433                    |
+| English Questions        | 13,451                    |
+| Hindi Questions          | 5,982                     |
+| Subject Domains          | 30+                       |
+| Government Exams Covered | 25+                       |
+
+### Subjects spanning BBF
+| Subject Domain                                | Count |
+|---------------------------------------------|-------|
+| Problem Solving                             | 5,686 |
+| Mathematics for Finance                     | 4,845 |
+| Banking Services                           | 1,171 |
+| Governance & Policy                        | 1,064 |
+| Language & Communication                   | 946   |
+| Corporate Finance & Investment             | 910   |
+| Commerce                                   | 863   |
+| Accounting                                 | 773   |
+| General Knowledge                          | 539   |
+| Information Technology Finance             | 490   |
+| Economics & Development Studies            | 274   |
+| Rural Economics                            | 261   |
+| Environmental Finance                      | 168   |
+| Taxation & Regulatory Compliance           | 155   |
+| Interdisciplinary Finance                  | 153   |
+| Data & Analytics in Finance                | 127   |
+| History, Sociology & Cultural Studies of Finance | 127 |
+| Finance Education                          | 118   |
+| Healthcare Economics                       | 114   |
+| Science and Technology in Finance          | 101   |
+| International Finance & Trade              | 83    |
+| Business Management                        | 83    |
+| Energy, Infrastructure & Finance           | 82    |
+| Behavioral Finance                         | 67    |
+| Financial Markets                          | 47    |
+| Sports, Media & Finance Linkages           | 45    |
+| Marketing Finance                          | 42    |
+| Insurance & Risk Management                | 42    |
+| Legal Finance                              | 34    |
+| Financial Technology                       | 23    |
 ## Usage
 
 ##### Prerequisites
@@ -95,7 +152,7 @@ export HF_HOME=/path/to/HF_CACHE/if/needed
 export HF_TOKEN=YOUR_HUGGINGFACE_TOKEN
 ```
 
-The following languages are supported for BBK:
+The following languages are supported for BBK and BBF:
 - English
 - Hindi
 
@@ -106,7 +163,7 @@ For HuggingFace models, you may use the following sample command:
 ```bash
 lm_eval --model hf \
     --model_args 'pretrained=google/gemma-2-27b-it,temperature=0.0,top_p=1.0,parallelize=True' \
-    --tasks bbk \
+    --tasks bbk,bbf \
     --batch_size auto:40 \  
     --log_samples \
     --output_path $EVAL_OUTPUT_PATH \
@@ -122,7 +179,7 @@ For vLLM-compatible models, you may use the following sample command:
 lm_eval --model vllm \
     --model_args 'pretrained=meta-llama/Llama-3.2-3B,tensor_parallel_size=$N_GPUS' \
     --gen_kwargs 'temperature=0.0,top_p=1.0' \
-    --tasks bbk \
+    --tasks bbk,bbf \
     --batch_size auto \
     --log_samples \
     --output_path $EVAL_OUTPUT_PATH
@@ -134,6 +191,7 @@ To evaluate your Model on a specific language, modify the `--tasks` parameter:
 
 ```bash
 --tasks bbk_English
+--tasks bbf_Hindi
 ```
 
 Replace `English` with the available language (e.g., Hindi, etc.).
@@ -147,20 +205,6 @@ Replace `English` with the available language (e.g., Hindi, etc.).
 5. When using vLLM, pass generation kwargs in the `--gen_kwargs` flag. For HuggingFace, include them in `model_args`.
 
 
-## Citation
-
-If you use BBK in your work, please cite us:
-
-```bibtex
-@misc{bhashabench-krishi-2025,
-  title  = {BhashaBench-Krishi: Benchmarking AI on Indian Agricultural Knowledge},
-  author = {BharatGen Research Team},
-  year   = {2025},
-  howpublished = {\url{https://huggingface.co/datasets/bharatgenai/bhashabench-krishi}},
-  note   = {Accessed: YYYY-MM-DD}
-}
-```
-
 
 ## License
 
@@ -169,7 +213,7 @@ This dataset is released under the [CC BY 4.0](https://creativecommons.org/licen
 
 ## Links
 
-- [GitHub Repository 💻](https://github.com/BharatGen-IITB-TIH/BhashaBench-Krishi)
+- [GitHub Repository 💻](https://github.com/BharatGen-IITB-TIH/BhashaBench)
 - [Paper 📄](#)
 - [Hugging Face Dataset 🤗](https://huggingface.co/datasets/bharatgenai/BhashaBench-Krishi)
 
