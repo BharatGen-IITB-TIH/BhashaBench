@@ -1,0 +1,9 @@
+group: bbl
+task:
+- bbl_English
+- bbl_Hindi
+aggregate_metric_list:
+- metric: acc
+  weight_by_size: true
+metadata:
+  version: '0.0'
