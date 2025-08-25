@@ -128,7 +128,64 @@ This repository contains code for evaluating language models on the BBK benchmar
     | Legal Finance                              | 34    |
     | Financial Technology                       | 23    |
 
-   
+3) **BhashaBench-Legal (BBL)** is the first large-scale, authentic benchmark designed to rigorously evaluate AI models on Indian **legal knowledge**.  
+Tailored for India’s diverse jurisdictional contexts, laws, exams, and legal practices, BBL draws from **50+ official government and institutional law exams** to assess models' ability to provide precise, context-aware, policy-relevant, and actionable legal advice.  [![Hugging Face](https://img.shields.io/badge/🤗%20Hugging%20Face-Datasets-blue)](https://huggingface.co/datasets/bharatgenai/BhashaBench-Legal)  
+
+    ### Key Features
+    
+    - **Languages**: English and Hindi (with plans for more Indic languages)  
+    - **Exams**: 50+ unique legal government and institutional exams across India  
+    - **Domains**: 20+ legal and allied disciplines, spanning over 200 specialized topics  
+    - **Questions**: 24,365 rigorously validated, exam-based questions  
+    - **Difficulty Levels**: Easy (8,200), Medium (12,150), Hard (4,015)  
+    - **Question Types**: Multiple Choice, Assertion-Reasoning, Match the Column, Rearrange the Sequence, Fill in the Blanks  
+    - **Focus**: Practical, context-rich, jurisdiction-specific legal knowledge essential for Indian legal practice  
+    
+    
+    ### Dataset Structure  
+    
+    ### Test Set  
+    The test set consists of the **BBL benchmark**, which contains approximately **24,365 multiple-choice questions** across **2 Indic languages** (English and Hindi).  
+    Support for more Indic languages will be added in upcoming versions.  
+        
+    ### Dataset Statistics  
+    
+    | Metric                   | Count   |
+    | ------------------------ | ------- |
+    | Total Questions          | 24,365  |
+    | English Questions        | 17,047  |
+    | Hindi Questions          | 7,318   |
+    | Subject Domains          | 20+     |
+    | Government Exams Covered | 50+     |
+    
+    ---
+    
+    ### Subjects spanning BBL  
+    
+    | Subject Domain                      | Count |
+    |------------------------------------|-------|
+    | Civil Litigation & Procedure        | 7126  |
+    | Constitutional & Administrative Law | 3609  |
+    | Criminal Law & Justice              | 2769  |
+    | Corporate & Commercial Law          | 2700  |
+    | General Academic Subjects           | 1756  |
+    | Legal Theory & Jurisprudence        | 1421  |
+    | Family & Personal Law               | 991   |
+    | International & Comparative Law     | 962   |
+    | Legal Skills & Communication        | 816   |
+    | Real Estate & Property Law          | 629   |
+    | Environmental & Energy Law          | 430   |
+    | Interdisciplinary Studies           | 363   |
+    | Tax & Revenue Law                   | 231   |
+    | Employment & Labour Law             | 175   |
+    | Technology & Cyber Law              | 123   |
+    | Intellectual Property Law           | 91    |
+    | Consumer & Competition Law          | 75    |
+    | Media & Entertainment Law           | 54    |
+    | Healthcare & Medical Law            | 25    |
+    | Human Rights & Social Justice       | 19    |
+
+
 ## Usage
 
 ##### Prerequisites
