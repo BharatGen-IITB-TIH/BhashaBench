@@ -223,7 +223,7 @@ For HuggingFace models, you may use the following sample command:
 ```bash
 lm_eval --model hf \
     --model_args 'pretrained=google/gemma-2-27b-it,temperature=0.0,top_p=1.0,parallelize=True' \
-    --tasks bbk,bbf \
+    --tasks bbk,bbf,bbl \
     --batch_size auto:40 \  
     --log_samples \
     --output_path $EVAL_OUTPUT_PATH \
@@ -239,7 +239,7 @@ For vLLM-compatible models, you may use the following sample command:
 lm_eval --model vllm \
     --model_args 'pretrained=meta-llama/Llama-3.2-3B,tensor_parallel_size=$N_GPUS' \
     --gen_kwargs 'temperature=0.0,top_p=1.0' \
-    --tasks bbk,bbf \
+    --tasks bbk,bbf,bbl \
     --batch_size auto \
     --log_samples \
     --output_path $EVAL_OUTPUT_PATH
