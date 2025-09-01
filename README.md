@@ -158,7 +158,6 @@ Tailored for India’s diverse jurisdictional contexts, laws, exams, and legal p
     | Subject Domains          | 20+     |
     | Government Exams Covered | 50+     |
     
-    ---
     
     ### Subjects spanning BBL  
     
@@ -185,6 +184,73 @@ Tailored for India’s diverse jurisdictional contexts, laws, exams, and legal p
     | Healthcare & Medical Law            | 25    |
     | Human Rights & Social Justice       | 19    |
 
+4) **BhashaBench-Ayur (BBA)** is the first comprehensive, large-scale benchmark designed to rigorously evaluate AI models on **Ayurvedic knowledge and practice**.  
+Tailored for India's traditional medicine system, BBA draws from **authentic Ayurvedic texts, examinations, and clinical practices** to assess models' ability to provide accurate, context-aware, and clinically relevant guidance in Ayurveda.  [![Hugging Face](https://img.shields.io/badge/🤗%20Hugging%20Face-Datasets-blue)](https://huggingface.co/datasets/bharatgenai/BhashaBench-Ayur)  
+    ### Key Features
+    
+    - **Languages**: English and Hindi (with plans for more Indic languages)  
+    - **Sources**: Authentic Ayurvedic examinations, classical texts, and modern Ayurvedic education standards  
+    - **Domains**: 15+ specialized Ayurvedic disciplines covering comprehensive traditional medicine knowledge  
+    - **Questions**: 14,963 rigorously validated, examination-based questions  
+    - **Difficulty Levels**: Easy (7,944), Medium (6,314), Hard (705)  
+    - **Question Types**: Multiple Choice Questions, Fill in the Blanks, Match the Column, Assertion-Reasoning  
+    - **Focus**: Practical, clinically-relevant, traditional medicine knowledge essential for Ayurvedic practice  
+    
+    
+    ### Dataset Structure  
+    
+    ### Test Set  
+    The test set consists of the **BBA benchmark**, which contains approximately **14,963 questions** across **2 Indic languages** (English and Hindi).  
+    Support for more Indic languages will be added in upcoming versions.  
+        
+    ### Dataset Statistics  
+    
+    | Metric                   | Count   |
+    | ------------------------ | ------- |
+    | Total Questions          | 14,963  |
+    | English Questions        | 9,348   |
+    | Hindi Questions          | 5,615   |
+    | Subject Domains          | 15+     |
+    | Classical Texts Covered  | Multiple|
+    
+    
+    ### Question Type Distribution  
+    
+    | Question Type           | Count   |
+    |------------------------|---------|
+    | Multiple Choice (MCQ)   | 14,717  |
+    | Fill in the Blanks     | 178     |
+    | Match the Column       | 41      |
+    | Assertion or Reasoning | 27      |
+    
+    ### Difficulty Level Distribution  
+    
+    | Difficulty Level | Count |
+    |------------------|-------|
+    | Easy            | 7,944 |
+    | Medium          | 6,314 |
+    | Hard            | 705   |
+    
+    ### Subjects spanning BBA  
+    
+    | Subject Domain                                          | Count |
+    |--------------------------------------------------------|-------|
+    | Kayachikitsa (General Medicine & Internal Medicine)    | 3,134 |
+    | Dravyaguna & Bhaishajya (Pharmacology & Therapeutics) | 2,972 |
+    | Samhita & Siddhanta (Fundamental Principles)          | 1,541 |
+    | Sharir (Anatomy & Physiology)                         | 1,346 |
+    | Panchakarma & Rasayana (Detoxification & Rejuvenation)| 1,308 |
+    | Stri Roga & Prasuti Tantra (Gynecology & Obstetrics) | 847   |
+    | Shalakya Tantra (ENT, Ophthalmology & Dentistry)     | 734   |
+    | Kaumarbhritya & Pediatrics (Child Health)            | 714   |
+    | Agad Tantra & Forensic Medicine (Toxicology)         | 587   |
+    | Shalya Tantra (Surgery)                               | 526   |
+    | Swasthavritta & Public Health (Preventive Medicine)  | 453   |
+    | Research & Statistics                                 | 210   |
+    | Ayurvedic Literature & History                        | 204   |
+    | Yoga & Psychology                                     | 188   |
+    | Administration, AYUSH & Miscellaneous                 | 119   |
+    | Roga Vigyana (Diagnostics & Pathology)              | 80    |
 
 ## Usage
 
@@ -212,7 +278,7 @@ export HF_HOME=/path/to/HF_CACHE/if/needed
 export HF_TOKEN=YOUR_HUGGINGFACE_TOKEN
 ```
 
-The following languages are supported for BBK and BBF:
+The following languages are supported for BBK, BBF, BBL and BBA:
 - English
 - Hindi
 
@@ -223,7 +289,7 @@ For HuggingFace models, you may use the following sample command:
 ```bash
 lm_eval --model hf \
     --model_args 'pretrained=google/gemma-2-27b-it,temperature=0.0,top_p=1.0,parallelize=True' \
-    --tasks bbk,bbf,bbl \
+    --tasks bbk,bbf,bbl,bba \
     --batch_size auto:40 \  
     --log_samples \
     --output_path $EVAL_OUTPUT_PATH \
@@ -239,7 +305,7 @@ For vLLM-compatible models, you may use the following sample command:
 lm_eval --model vllm \
     --model_args 'pretrained=meta-llama/Llama-3.2-3B,tensor_parallel_size=$N_GPUS' \
     --gen_kwargs 'temperature=0.0,top_p=1.0' \
-    --tasks bbk,bbf,bbl \
+    --tasks bbk,bbf,bbl,bba \
     --batch_size auto \
     --log_samples \
     --output_path $EVAL_OUTPUT_PATH
