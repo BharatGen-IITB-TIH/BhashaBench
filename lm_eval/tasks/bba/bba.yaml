@@ -1,0 +1,9 @@
+group: bba
+task:
+- bba_English
+- bba_Hindi
+aggregate_metric_list:
+- metric: acc
+  weight_by_size: true
+metadata:
+  version: '0.0'
